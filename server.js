@@ -66,14 +66,15 @@ app.get("/scrape", function(req, res){
 
     var $ = cheerio.load(response.data);
 
-    $("article").each(function(i, element){
+    $("article.grid_6").each(function(i, element){
 
       var result = {};
 
       result.title = $(this).find("h2").text();
-      console.log(result.title);
-      // result.summary = (this).children("h2").children("p").text();
-      // result.link = $(this).children("h2").children("a").attr("href");
+      // console.log(result.title);
+      result.summary = $(this).children("p").text();
+      result.link = $(this).children("a").attr("href");
+      // console.log(result.link);
     
     //scraaaaaaaape here
 
