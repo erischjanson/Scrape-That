@@ -23,6 +23,9 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
+// require("./routes/api/api-routes.js")(app);
+require("./routes/view/html-routes.js")(app);
+
 // Configure middleware
 
 // Use morgan logger for logging requests
@@ -40,6 +43,21 @@ mongoose.connect("mongodb://localhost/mongoHeadlines", {
 });
 
 // Routes
+
+// app.get("/", function(req, res){
+//   res.render("home");
+// });
+
+// app.get("/", function(req, res){
+//   db.Headline.find({})
+//   .then(function(dbHeadline){
+//     return res.render("home", {headline: dbHeadline});
+//     console.log(dbHeadline);
+//   })
+//   .catch(function(err){
+//     res.json(err);
+//   });
+// });
 
 app.get("/scrape", function(req, res){
   console.log("first get");

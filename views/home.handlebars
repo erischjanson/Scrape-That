@@ -1,13 +1,26 @@
 <wrapper> 
-  <div class="jumbotron">
+  <div class="jumbotron text-center">
   <h1 class="display-4">Welcome to Le Monde</h1>
   <p class="lead">See what's new in the Monde today!</p>
   <button id="search-button" type="submit" class="btn btn-primary">Get New Articles</button> 
 </div>
 
 <container>
+    {{!-- <div class="row">
+        <div class="col-md-12">
+            <ul class="list-group">
+                {{#each headline}}
+                <li class="list-group-item">
+                    <h3><a href={{this.link}} target="_new">{{this.title}}</a><span><button type="submit" id= "save-article" class="btn btn-default float-right" data-id = {{this.id}}>Save Article</button> </span></h3>  
+                    <p>{{this.summary}}</p>
+                </li>
+                {{/each}}
+            </ul>
 
-    
+        </div>
+    </div> --}}
+
+
 </container>    
 
 </wrapper>
