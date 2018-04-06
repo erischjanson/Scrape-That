@@ -17,6 +17,12 @@ var PORT = 3000;
 // Initialize Express
 var app = express();
 
+//Set Handlebars
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.set("view engine", "handlebars");
+
 // Configure middleware
 
 // Use morgan logger for logging requests
