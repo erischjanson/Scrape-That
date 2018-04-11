@@ -7,10 +7,11 @@ Scrape Dat is an app that uses Cheerio to scrape 2nd tier headlines from LeMonde
 ## Instructions ##
 
 ``
-git clone https://erischjanson.github.io/Scrape-That/ //clone repo
-cd into Scrape-That
-mongod //open mongodb
-mongo // open mongo shell
+git clone https://erischjanson.github.io/Scrape-That/ 
+cd /Scrape-That
+mongod 
+mongo 
 node server.js
+
 ``
 Click on "Get New Articles" and get reading!
